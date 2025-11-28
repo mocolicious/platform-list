@@ -1,4 +1,4 @@
-# Hub Platforms
+# @jup-ag/platform-list
 
 A comprehensive registry of platforms in the Solana DeFi ecosystem. This package provides structured platform data including metadata, links, and token information.
 
