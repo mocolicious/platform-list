@@ -13,15 +13,15 @@ export const platform: PlatformRaw = {
 };
 const contract: ContractRaw = {
   name: `PancakeSwap`,
-  address: 'HpNfyc2Saw7RKkQd8nEL4khUcuPhQ7WwY1B2qjx8jxFq',
+  address: "HpNfyc2Saw7RKkQd8nEL4khUcuPhQ7WwY1B2qjx8jxFq",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}`,
-    name: 'Liquidity',
-    platformId: platform.id,
-    contractsRaw: [contract],
-  },
-];
+const liquidityService: ServiceRaw = {
+  id: `${platform.id}`,
+  name: "Liquidity",
+  platformId: platform.id,
+  contractsRaw: [contract],
+};
+
+export const services: ServiceRaw[] = [liquidityService];

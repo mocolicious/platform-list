@@ -11,15 +11,15 @@ export const platform: PlatformRaw = {
 };
 const bridge: ContractRaw = {
   name: `Bridge`,
-  address: 'dahPEoZGXfyV58JqqH85okdHmpN8U2q8owgPUXSCPxe',
+  address: "dahPEoZGXfyV58JqqH85okdHmpN8U2q8owgPUXSCPxe",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-bridge`,
-    name: 'bridge',
-    platformId: platform.id,
-    contractsRaw: [bridge],
-  },
-];
+const bridgeService: ServiceRaw = {
+  id: `${platform.id}-bridge`,
+  name: "bridge",
+  platformId: platform.id,
+  contractsRaw: [bridge],
+};
+
+export const services: ServiceRaw[] = [bridgeService];

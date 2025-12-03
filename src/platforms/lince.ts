@@ -14,16 +14,16 @@ export const platform: PlatformRaw = {
 };
 
 const contract: ContractRaw = {
-  name: 'Lince',
-  address: 'LnceiBjUxxjGbhFpKz3SoGo9ntPYwm1DC3wkEQhav9j',
+  name: "Lince",
+  address: "LnceiBjUxxjGbhFpKz3SoGo9ntPYwm1DC3wkEQhav9j",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: 'lince',
-    name: 'Lending',
-    platformId: platform.id,
-    contractsRaw: [contract],
-  },
-];
+const lendingService: ServiceRaw = {
+  id: "lince",
+  name: "Lending",
+  platformId: platform.id,
+  contractsRaw: [contract],
+};
+
+export const services: ServiceRaw[] = [lendingService];

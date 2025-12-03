@@ -37,29 +37,37 @@ const staking: ContractRaw = {
   networkId: NetworkId.solana,
 }
 
+const poolsService: ServiceRaw = {
+  id: `${platform.id}-pools`,
+  name: 'Pools',
+  platformId: platform.id,
+  contractsRaw: [pools],
+};
+
+const farmsService: ServiceRaw = {
+  id: `${platform.id}-farms`,
+  name: 'Aqua Farms',
+  platformId: platform.id,
+  contractsRaw: [aquaFarms],
+};
+
+const whirlpoolsService: ServiceRaw = {
+  id: `${platform.id}-whirlpools`,
+  name: 'Whirlpools',
+  platformId: platform.id,
+  contractsRaw: [whirlpool],
+};
+
+const stakingService: ServiceRaw = {
+  id: `${platform.id}-staking`,
+  name: 'Staking',
+  platformId: platform.id,
+  contractsRaw: [staking],
+};
+
 export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-pools`,
-    name: 'Pools',
-    platformId: platform.id,
-    contractsRaw: [pools],
-  },
-  {
-    id: `${platform.id}-farms`,
-    name: 'Aqua Farms',
-    platformId: platform.id,
-    contractsRaw: [aquaFarms],
-  },
-  {
-    id: `${platform.id}-whirlpools`,
-    name: 'Whirlpools',
-    platformId: platform.id,
-    contractsRaw: [whirlpool],
-  },
-  {
-    id: `${platform.id}-staking`,
-    name: 'Staking',
-    platformId: platform.id,
-    contractsRaw: [staking],
-  },
+  poolsService,
+  farmsService,
+  whirlpoolsService,
+  stakingService,
 ];

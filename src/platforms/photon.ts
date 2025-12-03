@@ -12,16 +12,16 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 const mainContract: ContractRaw = {
-  name: 'Swap',
-  address: 'BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW',
+  name: "Swap",
+  address: "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-swap`,
-    name: 'Swap',
-    platformId: platform.id,
-    contractsRaw: [mainContract],
-  },
-];
+const swapService: ServiceRaw = {
+  id: `${platform.id}-swap`,
+  name: "Swap",
+  platformId: platform.id,
+  contractsRaw: [mainContract],
+};
+
+export const services: ServiceRaw[] = [swapService];

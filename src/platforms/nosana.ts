@@ -15,16 +15,16 @@ export const platform: PlatformRaw = {
   tags: ["tool", "depin", "dapp"],
 };
 const contract: ContractRaw = {
-  name: 'Staking',
-  address: 'nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE',
+  name: "Staking",
+  address: "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-staking`,
-    name: 'Staking',
-    platformId: platform.id,
-    contractsRaw: [contract],
-  },
-];
+const stakingService: ServiceRaw = {
+  id: `${platform.id}-staking`,
+  name: "Staking",
+  platformId: platform.id,
+  contractsRaw: [contract],
+};
+
+export const services: ServiceRaw[] = [stakingService];

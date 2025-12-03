@@ -14,16 +14,16 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 const unstakePoolContract: ContractRaw = {
-  name: 'Unstake Pool',
-  address: '2rU1oCHtQ7WJUvy15tKtFvxdYNNSc3id7AzUcjeFSddo',
+  name: "Unstake Pool",
+  address: "2rU1oCHtQ7WJUvy15tKtFvxdYNNSc3id7AzUcjeFSddo",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-unstake-pool`,
-    name: 'Unstake Pool',
-    platformId: platform.id,
-    contractsRaw: [unstakePoolContract],
-  },
-];
+const unstakePoolService: ServiceRaw = {
+  id: `${platform.id}-unstake-pool`,
+  name: "Unstake Pool",
+  platformId: platform.id,
+  contractsRaw: [unstakePoolContract],
+};
+
+export const services: ServiceRaw[] = [unstakePoolService];

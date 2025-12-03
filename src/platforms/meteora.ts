@@ -70,71 +70,93 @@ const bondingCurve: ContractRaw = {
   networkId: NetworkId.solana,
 }
 
+const stableSwapService: ServiceRaw = {
+  id: `${platform.id}-mercurial-stableswap`,
+  name: 'Stable Swap',
+  platformId: platform.id,
+  contractsRaw: [mercurialStableSwap],
+};
+
+const vaultsService: ServiceRaw = {
+  id: `${platform.id}-vaults`,
+  name: 'Vaults',
+  platformId: platform.id,
+  contractsRaw: [meteoraVaults],
+};
+
+const poolsService: ServiceRaw = {
+  id: `${platform.id}-pools`,
+  name: 'Pools',
+  platformId: platform.id,
+  contractsRaw: [meteoraPools],
+};
+
+const farmsService: ServiceRaw = {
+  id: `${platform.id}-farms`,
+  name: 'Farms',
+  platformId: platform.id,
+  contractsRaw: [meteoraFarms],
+};
+
+const dlmmService: ServiceRaw = {
+  id: `${platform.id}-dlmm`,
+  name: 'DLMM',
+  platformId: platform.id,
+  contractsRaw: [meteoraDlmm],
+};
+
+const dlmmVaultsService: ServiceRaw = {
+  id: `${platform.id}-dlmm-vaults`,
+  name: 'DLMM Vaults',
+  platformId: platform.id,
+  contractsRaw: [meteoraDlmmVaults],
+};
+
+const dammV2Service: ServiceRaw = {
+  id: `${platform.id}-damm-v2`,
+  name: 'DAMM V2',
+  platformId: platform.id,
+  contractsRaw: [dammV2],
+};
+
+const stakingService: ServiceRaw = {
+  id: `${platform.id}-m3m3-staking`,
+  name: 'Staking',
+  platformId: platform.id,
+  contractsRaw: [m3m3],
+};
+
+const bondingCurveService: ServiceRaw = {
+  id: `${platform.id}-bonding-curve`,
+  name: 'Bonding Curve',
+  platformId: platform.id,
+  contractsRaw: [bondingCurve],
+};
+
+const zapService: ServiceRaw = {
+  id: `${platform.id}-zap`,
+  name: 'Zap',
+  platformId: platform.id,
+  contractsRaw: [zap],
+};
+
+const liquidityAirdropService: ServiceRaw = {
+  id: `${platform.id}-liquidity-airdrop`,
+  name: 'Liquidity Airdrop',
+  platformId: platform.id,
+  contractsRaw: [liquidityAirdrop],
+};
+
 export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-mercurial-stableswap`,
-    name: 'Stable Swap',
-    platformId: platform.id,
-    contractsRaw: [mercurialStableSwap],
-  },
-  {
-    id: `${platform.id}-vaults`,
-    name: 'Vaults',
-    platformId: platform.id,
-    contractsRaw: [meteoraVaults],
-  },
-  {
-    id: `${platform.id}-pools`,
-    name: 'Pools',
-    platformId: platform.id,
-    contractsRaw: [meteoraPools],
-  },
-  {
-    id: `${platform.id}-farms`,
-    name: 'Farms',
-    platformId: platform.id,
-    contractsRaw: [meteoraFarms],
-  },
-  {
-    id: `${platform.id}-dlmm`,
-    name: 'DLMM',
-    platformId: platform.id,
-    contractsRaw: [meteoraDlmm],
-  },
-  {
-    id: `${platform.id}-dlmm-vaults`,
-    name: 'DLMM Vaults',
-    platformId: platform.id,
-    contractsRaw: [meteoraDlmmVaults],
-  },
-  {
-    id: `${platform.id}-damm-v2`,
-    name: 'DAMM V2',
-    platformId: platform.id,
-    contractsRaw: [dammV2],
-  },
-  {
-    id: `${platform.id}-m3m3-staking`,
-    name: 'Staking',
-    platformId: platform.id,
-    contractsRaw: [m3m3],
-  },
-  {
-    id: `${platform.id}-bonding-curve`,
-    name: 'Bonding Curve',
-    platformId: platform.id,
-    contractsRaw: [bondingCurve],
-  },
-  {
-    id: `${platform.id}-zap`,
-    name: 'Zap',
-    platformId: platform.id,
-    contractsRaw: [zap],
-  },
-  {
-    id: `${platform.id}-liquidity-airdrop`,
-    name: 'Liquidity Airdrop',
-    platformId: platform.id,
-    contractsRaw: [liquidityAirdrop],
-  },
+  stableSwapService,
+  vaultsService,
+  poolsService,
+  farmsService,
+  dlmmService,
+  dlmmVaultsService,
+  dammV2Service,
+  stakingService,
+  bondingCurveService,
+  zapService,
+  liquidityAirdropService,
 ];

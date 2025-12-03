@@ -15,16 +15,16 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 const contract: ContractRaw = {
-  name: 'Bundle',
-  address: 'BUNDDh4P5XviMm1f3gCvnq2qKx6TGosAGnoUK12e7cXU',
+  name: "Bundle",
+  address: "BUNDDh4P5XviMm1f3gCvnq2qKx6TGosAGnoUK12e7cXU",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: platform.id,
-    name: 'Strategies',
-    platformId: platform.id,
-    contractsRaw: [contract],
-  },
-];
+const strategiesService: ServiceRaw = {
+  id: platform.id,
+  name: "Strategies",
+  platformId: platform.id,
+  contractsRaw: [contract],
+};
+
+export const services: ServiceRaw[] = [strategiesService];

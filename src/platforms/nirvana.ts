@@ -22,16 +22,16 @@ export const platform: PlatformRaw = {
   ],
 };
 const contract: ContractRaw = {
-  name: 'Borrow & Governance',
-  address: 'NirvHuZvrm2zSxjkBvSbaF2tHfP5j7cvMj9QmdoHVwb',
+  name: "Borrow & Governance",
+  address: "NirvHuZvrm2zSxjkBvSbaF2tHfP5j7cvMj9QmdoHVwb",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: platform.id,
-    name: 'Borrow & Governance',
-    platformId: platform.id,
-    contractsRaw: [contract],
-  },
-];
+const mainService: ServiceRaw = {
+  id: platform.id,
+  name: "Borrow & Governance",
+  platformId: platform.id,
+  contractsRaw: [contract],
+};
+
+export const services: ServiceRaw[] = [mainService];

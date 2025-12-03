@@ -11,17 +11,17 @@ export const platform: PlatformRaw = {
   },
   tags: ["dapp", "stablecoin"],
 };
-const deposit: ContractRaw = {
+const depositContract: ContractRaw = {
   name: `Deposit`,
-  address: 'onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe',
+  address: "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe",
   networkId: NetworkId.solana,
-}
+};
 
-export const services: ServiceRaw[] = [
-  {
-    id: `${platform.id}-deposit`,
-    name: 'Deposit',
-    platformId: platform.id,
-    contractsRaw: [deposit],
-  },
-];
+const depositService: ServiceRaw = {
+  id: `${platform.id}-deposit`,
+  name: "Deposit",
+  platformId: platform.id,
+  contractsRaw: [depositContract],
+};
+
+export const services: ServiceRaw[] = [depositService];
