@@ -27,7 +27,7 @@ const stakingContract = {
 };
 
 const stakingService: ServiceRaw = {
-  id: `${platform.id}-staking`,
+  id: `${platform.id}-staking-1`,
   name: "Staking",
   platformId: platform.id,
   networkId: NetworkId.solana,
@@ -35,7 +35,7 @@ const stakingService: ServiceRaw = {
 };
 
 const stakingService2: ServiceRaw = {
-  id: `${platform.id}-staking`,
+  id: `${platform.id}-staking-2`,
   name: "Staking",
   platformId: platform.id,
   networkId: NetworkId.solana,

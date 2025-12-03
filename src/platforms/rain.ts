@@ -62,7 +62,7 @@ const vaultsService: ServiceRaw = {
 };
 
 const liquidService: ServiceRaw = {
-  id: "rain-vaults",
+  id: "rain-vaults-liquid",
   name: "Liquid",
   platformId: platform.id,
   networkId: NetworkId.solana,
