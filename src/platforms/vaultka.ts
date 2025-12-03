@@ -77,7 +77,7 @@ const leverageService: ServiceRaw = {
   id: `${platform.id}-leverage`,
   name: "Leverage",
   platformId: platform.id,
-  contractsRaw: [vaultkaV2Contract],
+  contractsRaw: [],
 };
 
 export const services: ServiceRaw[] = [

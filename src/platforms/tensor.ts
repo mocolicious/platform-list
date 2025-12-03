@@ -32,12 +32,6 @@ const bidContract = {
   networkId: NetworkId.solana,
 };
 
-const airdropContract = {
-  name: "Magma",
-  address: "3zK38YBP6u3BpLUpaa6QhRHh4VXdv3J8cmD24fFpuyqy",
-  networkId: NetworkId.solana,
-};
-
 const ammContract = {
   name: "AMM",
   address: "TAMM6ub33ij1mbetoMyVBLeKY5iP41i4UPUJQGkhfsg",
@@ -64,13 +58,6 @@ const cnftService: ServiceRaw = {
   contractsRaw: [cnftContract],
 };
 
-const airdropService: ServiceRaw = {
-  id: `${platform.id}-airdrop`,
-  name: "Vesting Airdrop",
-  platformId: platform.id,
-  contractsRaw: [airdropContract],
-};
-
 const bidService: ServiceRaw = {
   id: `${platform.id}-bid`,
   name: "Bid",
@@ -95,7 +82,6 @@ const luckyBuyService: ServiceRaw = {
 export const services: ServiceRaw[] = [
   marketplaceService,
   cnftService,
-  airdropService,
   bidService,
   tammService,
   luckyBuyService,

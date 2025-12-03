@@ -15,12 +15,6 @@ const mainContract = {
   networkId: NetworkId.solana,
 };
 
-const bubblegumContract = {
-  name: "Bubblegum",
-  address: "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY",
-  networkId: NetworkId.solana,
-};
-
 const service: ServiceRaw = {
   id: `${platform.id}-core`,
   name: "Core",
@@ -28,11 +22,4 @@ const service: ServiceRaw = {
   contractsRaw: [mainContract],
 };
 
-const metadataService: ServiceRaw = {
-  id: `${platform.id}-metadata`,
-  name: "Metadata",
-  platformId: platform.id,
-  contractsRaw: [bubblegumContract, mainContract],
-};
-
-export const services: ServiceRaw[] = [service, metadataService];
+export const services: ServiceRaw[] = [service];

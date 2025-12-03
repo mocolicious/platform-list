@@ -25,11 +25,4 @@ const tradeService: ServiceRaw = {
   contractsRaw: [contract],
 };
 
-const earnService: ServiceRaw = {
-  id: `${platform.id}-earn`,
-  name: "Trade",
-  platformId: platform.id,
-  contractsRaw: [contract],
-};
-
-export const services: ServiceRaw[] = [tradeService, earnService];
+export const services: ServiceRaw[] = [tradeService];
