@@ -12,13 +12,24 @@ const nameSchema = z
 
 const platformIdSchema = z
   .string()
+  .min(1, "Platform ID must not be empty")
+  .max(60, "Platform ID must not exceed 60 characters")
   .regex(
     /^[a-z0-9][a-z0-9-]*$/,
     "ID must be in kebab-case: lowercase letters, numbers, and hyphens only. Cannot start with a hyphen.",
   );
 
+const idSchema = z
+  .string()
+  .min(1, "ID must not be empty")
+  .max(60, "ID must not exceed 60 characters")
+  .regex(
+    /^[a-zA-Z0-9][a-zA-Z0-9-]*$/,
+    "ID must be in kebab-case format: letters (including uppercase), numbers, and hyphens only. Cannot start with a hyphen.",
+  );
+
 export const ContractSchema = z.object({
-  id: z.string(),
+  id: idSchema,
   name: nameSchema,
   address: z.string(),
   serviceId: z.string(),
@@ -27,7 +38,7 @@ export const ContractSchema = z.object({
 });
 
 export const ServiceSchema = z.object({
-  id: z.string(),
+  id: idSchema,
   name: nameSchema,
   platformId: platformIdSchema,
   networkId: z.string(),
