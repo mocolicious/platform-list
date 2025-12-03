@@ -18,49 +18,49 @@ export const platform: PlatformRaw = {
 };
 const pools: ContractRaw = {
   name: `Orca Pools`,
-  address: '9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP',
+  address: "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
   networkId: NetworkId.solana,
-}
+};
 const aquaFarms: ContractRaw = {
   name: `Orca Aqua Farms`,
-  address: '82yxjeMsvaURa4MbZZ7WZZHfobirZYkH1zF8fmeGtyaQ',
+  address: "82yxjeMsvaURa4MbZZ7WZZHfobirZYkH1zF8fmeGtyaQ",
   networkId: NetworkId.solana,
-}
+};
 const whirlpool: ContractRaw = {
   name: `Orca Whirlpool`,
-  address: 'whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc',
+  address: "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
   networkId: NetworkId.solana,
-}
+};
 const staking: ContractRaw = {
   name: `Orca Staking`,
-  address: 'StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT',
+  address: "StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT",
   networkId: NetworkId.solana,
-}
+};
 
 const poolsService: ServiceRaw = {
   id: `${platform.id}-pools`,
-  name: 'Pools',
+  name: "Pools",
   platformId: platform.id,
   contractsRaw: [pools],
 };
 
 const farmsService: ServiceRaw = {
   id: `${platform.id}-farms`,
-  name: 'Aqua Farms',
+  name: "Aqua Farms",
   platformId: platform.id,
   contractsRaw: [aquaFarms],
 };
 
 const whirlpoolsService: ServiceRaw = {
   id: `${platform.id}-whirlpools`,
-  name: 'Whirlpools',
+  name: "Whirlpools",
   platformId: platform.id,
   contractsRaw: [whirlpool],
 };
 
 const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
-  name: 'Staking',
+  name: "Staking",
   platformId: platform.id,
   contractsRaw: [staking],
 };

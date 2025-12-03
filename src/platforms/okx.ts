@@ -11,30 +11,27 @@ export const platform: PlatformRaw = {
 };
 const aggregator: ContractRaw = {
   name: `Aggregator`,
-  address: '6m2CDdhRgxpH4WjvdzxAYbGxwdGUz5MziiL5jek2kBma',
+  address: "6m2CDdhRgxpH4WjvdzxAYbGxwdGUz5MziiL5jek2kBma",
   networkId: NetworkId.solana,
-}
+};
 const aggregatorV6: ContractRaw = {
   name: `Aggregator V6`,
-  address: 'proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u',
+  address: "proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u",
   networkId: NetworkId.solana,
-}
+};
 
 const aggregatorService: ServiceRaw = {
   id: `${platform.id}-aggregator`,
-  name: 'Aggregator',
+  name: "Aggregator",
   platformId: platform.id,
   contractsRaw: [aggregator],
 };
 
 const aggregatorV6Service: ServiceRaw = {
   id: `${platform.id}-aggregator-v6`,
-  name: 'Aggregator V6',
+  name: "Aggregator V6",
   platformId: platform.id,
   contractsRaw: [aggregatorV6],
 };
 
-export const services: ServiceRaw[] = [
-  aggregatorService,
-  aggregatorV6Service,
-];
+export const services: ServiceRaw[] = [aggregatorService, aggregatorV6Service];

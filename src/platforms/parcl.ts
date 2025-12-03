@@ -15,38 +15,38 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 const mainContract: ContractRaw = {
-  name: 'Liquidity & Trading',
-  address: '3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y',
+  name: "Liquidity & Trading",
+  address: "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y",
   networkId: NetworkId.solana,
-}
+};
 const stakingContract: ContractRaw = {
-  name: 'Parcl Staking',
-  address: '2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu',
+  name: "Parcl Staking",
+  address: "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu",
   networkId: NetworkId.solana,
-}
+};
 const airdropContract: ContractRaw = {
-  name: 'Airdrop',
-  address: '5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve',
+  name: "Airdrop",
+  address: "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve",
   networkId: NetworkId.solana,
-}
+};
 
 const mainService: ServiceRaw = {
   id: `${platform.id}-main`,
-  name: 'Liquidity & Trading',
+  name: "Liquidity & Trading",
   platformId: platform.id,
   contractsRaw: [mainContract],
 };
 
 const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
-  name: 'Staking',
+  name: "Staking",
   platformId: platform.id,
   contractsRaw: [stakingContract],
 };
 
 const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
-  name: 'Airdrop',
+  name: "Airdrop",
   platformId: platform.id,
   contractsRaw: [airdropContract],
 };
