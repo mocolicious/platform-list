@@ -13,7 +13,7 @@ export const platform: PlatformRaw = {
   tags: ["fitness", "dapp"],
 };
 
-const main: ContractRaw = {
+export const mainContract: ContractRaw = {
   name: `Game`,
   address: "FitAFk15vtx2PBjfr7QTnefaHRx6HwajRiZMt1DdSSKU",
   networkId: NetworkId.solana,
@@ -23,14 +23,14 @@ export const gameService: ServiceRaw = {
   id: `${platform.id}-game`,
   name: "Game",
   platformId: platform.id,
-  contractsRaw: [main],
+  contractsRaw: [mainContract],
 };
 
 export const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  contractsRaw: [main],
+  contractsRaw: [],
 };
 
 export const services: ServiceRaw[] = [gameService, airdropService];
